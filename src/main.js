@@ -7,6 +7,8 @@ import HomeView from "@/views/HomeView.vue";
 import UsersView from "@/views/UsersView.vue";
 import AddUserView from "@/views/AddUserView.vue";
 
+import store from "./store/userStore";
+
 import App from "./App.vue";
 
 const routes = [
@@ -20,4 +22,4 @@ const router = createRouter({
   routes
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(router).use(store).mount("#app");
